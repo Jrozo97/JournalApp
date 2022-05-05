@@ -3,6 +3,7 @@ import Swal from 'sweetalert2'
 import { types } from "../types/types"
 import { firebase, googleAuthProvider } from '../firebase/firebase-config';
 import { finishLoading, startLoading } from "./ui";
+import { noteLogout } from './notes';
 
 export const startLoginEmailPassword = (email, password) => {
     return (dispatch) => {
@@ -22,9 +23,6 @@ export const startLoginEmailPassword = (email, password) => {
                 dispatch( finishLoading() );
                 Swal.fire('Error', e.message, 'error');
             })
-        // setTimeout(() => {
-        //     dispatch(login (123, 'Jimmy'));
-        // }, 3500)
     }
 }
 
@@ -61,7 +59,6 @@ export const startGoogleLogin = () => {
 }
 
 
-
 export const login = (uid, displayName) => {
     return {
         type: types.login,
@@ -77,6 +74,7 @@ export const startLogout = () => {
         await firebase.auth().signOut();
 
         dispatch( logout() );
+        dispatch ( noteLogout() );
     }
 }
 
