@@ -1,19 +1,24 @@
 .auth__main{
     align-items: center;
-    background-color: $primary;
+    // background-color: $primary;
+    background: linear-gradient(90deg, rgba(29,92,99,1) 0%, rgba(65,125,122,1) 49%, rgba(26,60,64,1) 100%);
     display: flex;
     justify-content: center;
     margin: 0px;
     height: 100vh;
     width: 100vw;
+
 }
 
 .auth__box-container{
     background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     border-radius: 2px;
-    box-shadow: 0px 3px $dark-grey;
+    box-shadow: 0px 3px 6px $dark-grey;
     padding: 20px;
-    width: 250px;
+    width: 29.86vw;
 }
 
 .auth__title{
@@ -22,18 +27,19 @@
 }
 
 .auth__input{
-    color: $dark-grey;
-    border: 0px;
-    border-bottom: 1px solid $light-grey;
+    color: $greenTertiary;
+    border: 1px solid $greenTertiary;
+    border-radius: 30px;
     font-size: 16px;
-    margin-bottom: 10px;
-    height: 20px;
-    width: 100%;
+    margin-bottom: 13px;
+    height: 36px;
+    width: 22.63vw;
+    padding: 9px 20px;
 
     transition: border-bottom 0.3s ease;
 
     &:focus{
-        border-bottom: 1px solid $primary;
+        border: 1px solid darken($color: $greenTertiary, $amount: 20);
         outline: none;
     }
 }
@@ -58,3 +64,24 @@
     padding: 5px;
 }
 
+.logo-journal{
+    margin-bottom: 27px;
+}
+
+.form-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tile-social-networks{
+    color: $greenTertiary;
+    text-align: center;
+    margin-bottom: 17px;
+}
+
+.text-login-signup{
+    color: $greenSecondary;
+    font-size: 16px;
+    margin-top: 27px;
+}

@@ -3,14 +3,14 @@
 }
 
 .journal__sidebar{
-    background-color: $dark-grey;
-    color: white;
+    background-color: $greenPrimary;
+    color: $secondary;
     display: flex;
     flex-direction: column;
     height: 100vh;
     padding-left: 10px;
     padding-right: 10px;
-    width: 450px;
+    width: 31.25vw;
 }
 
 .journal__sidebar-navbar{
@@ -84,4 +84,17 @@
 
 .journal__entry-date-box span{
     font-size: 12px;
+}
+
+.journal__sidebar-navbar-title{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.name-title{
+    margin-left: 14px;
+    font-size: 26px;
+    font-weight: bold;
 }

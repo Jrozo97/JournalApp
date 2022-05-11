@@ -26,7 +26,7 @@ export const NotesAppbar = () => {
 
   return (
     <div className='notes__appbar'>
-      <span>28 de agosto 2022</span>
+      <span>Personal note</span>
 
       <input
         id='fileSelector'
@@ -36,18 +36,20 @@ export const NotesAppbar = () => {
         onChange={handleFileChange}
       />
 
-      <div>
+      <div className='notes__buttons'>
         <button
-          className='btn'
+          className='btn-notes-appbar'
           onClick={handlePictureUpload}
         >
           Picture
+          <i className="fa-solid fa-image"></i>
         </button>
         <button
-          className='btn'
+          className='btn-notes-appbar'
           onClick={handleSave}
         >
           Save
+          <i className="fa-solid fa-floppy-disk"></i>
         </button>
       </div>
 

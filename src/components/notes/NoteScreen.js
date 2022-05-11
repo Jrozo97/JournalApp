@@ -31,7 +31,7 @@ export const NoteScreen = () => {
     }, [formValues, dispatch])
 
     const handleDeleteNote = () => {
-        dispatch( startDeletingNote( id ) )
+        dispatch(startDeletingNote(id))
     }
 
 
@@ -59,26 +59,31 @@ export const NoteScreen = () => {
                     onChange={handleInputChange}
                 >
                 </textarea>
+                <div className='footer-notes'>
 
-                {
-                    (note.url)
-                    && (
-                        <div className='notes__image'>
-                            <img
-                                src={note.url}
-                                alt='image_note'
-                            />
+                    {
+                        (note.url)
+                        && (
+                            <div className='notes__image'>
+                                <img
+                                    src={note.url}
+                                    alt='image_note'
+                                />
 
-                        </div>
-                    )
-                }
+                            </div>
+                        )
+                    }
+                    <div className='notes__delete-note' onClick={handleDeleteNote}>
+                        <span className='icon-delete'>
+                        <i className="fa-solid fa-trash"></i>
+                        </span>
+                        <br />
+                        <h3>Delete</h3>
+                    </div>
+                </div>
 
             </div>
 
-            <button
-                className='btn btn-danger'
-                onClick={handleDeleteNote}
-            >delete</button>
 
         </div>
     )

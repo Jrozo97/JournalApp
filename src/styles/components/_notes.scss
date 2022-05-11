@@ -6,18 +6,21 @@
 
 .notes__appbar {
   align-items: center;
-  background-color: $primary;
-  color: white;
+  background-color: $greenPrimary;
+  color: $secondary;
   display: flex;
   justify-content: space-between;
   padding: 10px 20px 10px 20px;
 }
 
 .notes__content {
+  background-color: $secondary;
+  color: $greenPrimary;
   display: flex;
   flex-direction: column;
   height: 100%;
   padding: 20px;
+  
 }
 
 .notes__title-input,
@@ -30,6 +33,7 @@
 }
 
 .notes__title-input {
+  background-color: $secondary;
   color: $dark-grey;
   font-size: 25px;
   font-weight: 700;
@@ -37,6 +41,7 @@
 }
 
 .notes__textarea {
+  background-color: $secondary;
   color: $dark-grey;
   font-size: 20px;
   flex: 1 1 auto;
@@ -46,4 +51,29 @@
 .notes__image img {
   box-shadow: 5px 5px $dark-grey;
   height: 150px;
+}
+
+.footer-notes{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.notes__delete-note{
+  align-items: center;
+  color: $greenPrimary;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.icon-delete{
+  color: $greenPrimary;
+  font-size: 40px;
+}
+
+.notes__buttons{
+  display: flex;
+  flex-direction: row;
 }
