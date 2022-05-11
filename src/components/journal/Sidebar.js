@@ -21,11 +21,13 @@ export const Sidebar = () => {
         <aside className='journal__sidebar'>
 
             <div className='journal__sidebar-navbar'>
-                <h3 className='mt-5'>
-                    <i className='far fa-moon'></i>
-                    <span> {name} </span>
+                <h3 className='journal__sidebar-navbar-title'>
+                    <img
+                        src="https://firebasestorage.googleapis.com/v0/b/journalapp-4d018.appspot.com/o/Grupo%2014.png?alt=media&token=3c4e86a4-fc3a-4a75-b679-0b84d88cf976"
+                        alt="logo journal" />
+                    <span className='name-title'> {name} </span>
                 </h3>
-                <button className='btn' onClick={handleLogout}>Logout</button>
+                <button className='btn-logout' onClick={handleLogout}>Logout <i className="fa-solid fa-arrow-right-from-bracket"></i></button>
             </div>
 
             <div

@@ -49,10 +49,13 @@ export const RegisterScreen = () => {
 
   return (
     <>
-      <h3 className='auth__title'>Register</h3>
+      <img
+        className='logo-journal'
+        src="https://firebasestorage.googleapis.com/v0/b/journalapp-4d018.appspot.com/o/Grupo%203.png?alt=media&token=1c5e189f-bf18-47bd-af98-22a3b96ad07a"
+        alt="logo journal" />
       <form
         onSubmit={handleRegister}
-        className="animate__animated animate__fadeIn animate__faster"
+        className="form-info animate__animated animate__fadeIn animate__faster"
       >
 
         {
@@ -97,12 +100,12 @@ export const RegisterScreen = () => {
           value={confirmPassword}
           onChange={handleInputChange}
         />
-        <button className='btn btn-primary btn-block mb-5' type='submit'>Register</button>
+        <button className='btn-register' type='submit'>Register</button>
 
 
-        <Link to="/auth/login" className='link'>
-          Already registered?
-        </Link>
+        <h3 className='text-login-signup'>
+          Do you already have an account? <Link to="/auth/login" className='link'> Log in</Link>
+        </h3>
 
       </form>
 

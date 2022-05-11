@@ -27,10 +27,15 @@ export const LoginScreen = () => {
 
   return (
     <>
-      <h3 className='auth__title'>Login</h3>
+      {/* <div> */}
+      <img
+        className='logo-journal'
+        src="https://firebasestorage.googleapis.com/v0/b/journalapp-4d018.appspot.com/o/Grupo%203.png?alt=media&token=1c5e189f-bf18-47bd-af98-22a3b96ad07a"
+        alt="logo journal" />
+      {/* </div> */}
       <form
         onSubmit={handleLogin}
-        className="animate__animated animate__fadeIn animate__faster"
+        className="form-info animate__animated animate__fadeIn animate__faster"
       >
 
         <input
@@ -53,7 +58,7 @@ export const LoginScreen = () => {
         />
 
         <button
-          className='btn btn-primary btn-block'
+          className='btn-register'
           type='submit'
           disabled={isLoading}
         >
@@ -62,7 +67,7 @@ export const LoginScreen = () => {
 
 
         <div className='auth__social-networks'>
-          <p>Login with social networks</p>
+          <p className='tile-social-networks'>Or <br></br>Login with social networks</p>
           <div
             className="google-btn"
             onClick={handleGoogleLogin}
@@ -75,9 +80,9 @@ export const LoginScreen = () => {
             </p>
           </div>
         </div>
-        <Link to="/auth/register" className='link'>
-          Create new account
-        </Link>
+        <h3 className='text-login-signup'>
+          You do not have an account? <Link to="/auth/register" className='link'> Create an account</Link>
+        </h3>
 
       </form>
 
