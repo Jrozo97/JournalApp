@@ -49,9 +49,16 @@
     border-radius: 4px;
     color: $dark-grey;
     display: flex;
-    justify-content: space-between;
+    // justify-content: space-between;
     margin-bottom: 10px;
     overflow: hidden;
+}
+
+.journal__entry-container{
+    display: flex ;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
 }
 
 .journal__entry-picture{
@@ -97,4 +104,12 @@
     margin-left: 14px;
     font-size: 26px;
     font-weight: bold;
+}
+
+@media screen and (max-width: 1220px){
+    
+    .journal__entry{
+    justify-content: space-between;
+    }
+        
 }

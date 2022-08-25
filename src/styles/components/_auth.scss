@@ -18,7 +18,10 @@
     border-radius: 2px;
     box-shadow: 0px 3px 6px $dark-grey;
     padding: 20px;
-    width: 29.86vw;
+    width: 480px;
+
+    transition: width 0.3s ease;
+
 }
 
 .auth__title{
@@ -33,9 +36,10 @@
     font-size: 16px;
     margin-bottom: 13px;
     height: 36px;
-    width: 22.63vw;
+    width: 340px;
     padding: 9px 20px;
 
+    transition: width 0.3s ease;
     transition: border-bottom 0.3s ease;
 
     &:focus{
@@ -66,6 +70,10 @@
 
 .logo-journal{
     margin-bottom: 27px;
+    width: 146px;
+    height: 108px;
+    transition: width 0.3s ease;
+
 }
 
 .form-info{
@@ -84,4 +92,28 @@
     color: $greenSecondary;
     font-size: 16px;
     margin-top: 27px;
+}
+
+@media screen and (max-width: 1440px){
+    .auth__box-container{
+        width: 430px;
+        transition: width 0.3s ease;
+    }
+
+    .auth__input{
+        width: 326px;
+        height: 36px;
+        transition: width 0.3s ease;
+
+    }
+
+    .logo-journal{
+        margin-bottom: 27px;
+        width: 131px;
+        height: 91px;
+        transition: width 0.3s ease;
+
+    }
+    
+    
 }

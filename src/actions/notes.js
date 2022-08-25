@@ -9,8 +9,7 @@ import { types } from "../types/types";
 export const startNewNote = () => {
     return async( dispatch, getState ) => {
         const { uid } = getState().auth;
-        // const { active } = getState().notes;
-
+        
         const newNote = {
             title: '',
             body: '',
