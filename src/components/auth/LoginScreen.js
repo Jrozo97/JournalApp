@@ -10,8 +10,8 @@ export const LoginScreen = () => {
   const { isLoading } = useSelector(state => state.ui)
 
   const [formValues, handleInputChange] = useForm({
-    email: 'nando@gmail.com',
-    password: '123456'
+    email: '',
+    password: ''
   })
 
   const { email, password } = formValues
@@ -27,12 +27,10 @@ export const LoginScreen = () => {
 
   return (
     <>
-      {/* <div> */}
       <img
         className='logo-journal'
         src="https://firebasestorage.googleapis.com/v0/b/journalapp-4d018.appspot.com/o/Grupo%203.png?alt=media&token=1c5e189f-bf18-47bd-af98-22a3b96ad07a"
         alt="logo journal" />
-      {/* </div> */}
       <form
         onSubmit={handleLogin}
         className="form-info animate__animated animate__fadeIn animate__faster"

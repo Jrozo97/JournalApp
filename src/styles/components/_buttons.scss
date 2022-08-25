@@ -54,7 +54,7 @@
   margin-top: 5px;
   height: 40px;
   transition: box-shadow 0.3s ease;
-  width: 100%;
+  width: 240px;
 
   .google-icon-wrapper {
     align-items: center;
@@ -88,10 +88,9 @@
   border: none;
   border-radius: 20px;
   color: $secondary;
-  font-size: 12px;
-  // padding: 3.25vh 10.833vw;
-  width: 10.833vw;
-  height: 1.805vw;
+  font-size: 16px;
+  width: 156px;
+  height: 36px;
   cursor: pointer;
 
   transition: color 0.3s ease;
@@ -138,4 +137,13 @@
 .fa-image,
 .fa-floppy-disk{
     margin-left: 11px;
+}
+
+@media screen and (max-width: 1440px){
+  
+  .google-btn{
+    width: 204px;
+  }
+
+      
 }
